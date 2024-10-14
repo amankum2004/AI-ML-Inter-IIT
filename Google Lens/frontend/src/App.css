@@ -1,54 +1,69 @@
-/* Add this to your CSS file or inside a <style> tag if using inline styles */
+/* App.css */
+
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f4f4f9;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%);
+  color: #333;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .App {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
 }
 
 h1 {
-  color: #333;
-  text-align: center;
+  font-size: 2.5rem;
+  color: #ff6b6b;
   margin-bottom: 20px;
-  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
-input[type="text"] {
-  width: 100%;
-  padding: 12px;
+input {
+  width: 80%;
+  padding: 10px;
   margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1em;
+  border: 2px solid #ff6b6b;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  border-color: #ff85a1;
 }
 
 button {
-  background-color: #3498db;
+  background-color: #ff6b6b;
   color: white;
-  padding: 10px 15px;
   border: none;
-  border-radius: 5px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
-  font-size: 1em;
-  margin-top: 10px;
+  margin: 10px 5px;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #2980b9;
+  background-color: #ff85a1;
 }
 
 button:disabled {
-  background-color: #bdc3c7;
+  background-color: #ffe6e6;
   cursor: not-allowed;
 }
 
@@ -60,61 +75,43 @@ button:disabled {
 }
 
 .images img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-h2 {
-  color: #333;
-  margin-top: 20px;
-  font-size: 1.5em;
+.images img:hover {
+  transform: scale(1.1);
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
+  margin-top: 20px;
 }
 
 ul li {
-  background: #3498db;
-  margin: 5px 0;
-  border-radius: 5px;
-}
-
-ul li a {
-  display: block;
-  padding: 10px;
-  color: white;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  border-radius: 5px;
-}
-
-ul li a:hover {
-  background-color: #2980b9;
-}
-
-p {
-  color: #555;
-  font-size: 1.1em;
   margin: 10px 0;
 }
 
-@media (max-width: 600px) {
-  .images {
-    flex-direction: column;
-    align-items: center;
-  }
+ul li a {
+  color: #ff6b6b;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-  input[type="text"] {
-    font-size: 0.9em;
-  }
+ul li a:hover {
+  color: #ff85a1;
+}
 
-  button {
-    width: 100%;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
